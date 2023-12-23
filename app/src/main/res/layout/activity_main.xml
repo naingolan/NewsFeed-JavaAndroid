@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEWS"
+        android:layout_weight="10"
+        android:fontFamily="@font/maestro"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_marginLeft="10dp"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/aboutUs"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_dot_24dp"
+            android:backgroundTint="@color/black"
+            android:padding="10dp"
+            android:text="About Us"
+            />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/black_background"
+        android:rowCount="2">
+
+        <EditText
+            android:id="@+id/etQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Search"
+            android:fontFamily="@font/maestro"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:inputType="textPersonName"
+            android:layout_columnWeight="1"
+            android:padding="10dp"
+            android:background="@drawable/black_background"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="@drawable/black_background"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:paddingRight="20dp" />
+    </GridLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</LinearLayout>
